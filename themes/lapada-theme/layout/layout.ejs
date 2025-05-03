@@ -7,7 +7,7 @@
     <title><%= config.title %></title>
     <style>
         body {
-            background: url("/assets/back.png") no-repeat fixed center center / cover;
+            background: url("<%- url_for('/assets/back.png') %>") no-repeat fixed center center / cover;
             image-rendering: pixelated;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
