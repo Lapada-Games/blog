@@ -1,3 +1,13 @@
 <div style="text-align: center; image-rendering: auto;">
-    <img src="<%- url_for('/assets/banner.png') %>" style="width: 500px;" alt="">
+    <img src="<%- url_for('/assets/banner1.png') %>" onmouseover="changeBannerFrame(this, 2)" onmouseleave="changeBannerFrame(this, 1)" style="width: 500px;" alt="">
 </div>
+
+<script>
+    function changeBannerFrame(elem, frame) {
+        if (frame == 1)
+            elem.src = "<%- url_for('/assets/banner1.png') %>";
+        else
+            elem.src = "<%- url_for('/assets/banner2.png') %>";
+
+    }
+</script>
