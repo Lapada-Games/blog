@@ -1,0 +1,19 @@
+
+<% page.posts.each(function(post) { %>
+  <article class="post">
+    <h2><a href="<%= url_for(post.path) %>"><%= post.title %></a></h2>
+    <time datetime="<%= post.date.toISOString() %>"><%= date(post.date, 'yyyy-mm-dd') %></time>
+    <div class="content"><%- post.excerpt || post.content %></div>
+  </article>
+  <br>
+
+<% }); %>
+<div style="text-align: center; display: flex; justify-content: space-between; width: 100px; margin: auto;">
+  <%- paginator({
+      prev_text: "<button style='cursor: pointer;'> << </button>",
+      next_text: "<button style='cursor: pointer;'> >> </button>",
+      current_class: 'bolder',
+      space_text: '&nbsp;',
+      escape: false
+  }) %>
+</div>

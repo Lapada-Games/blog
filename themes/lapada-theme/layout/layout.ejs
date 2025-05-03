@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- partial('partial/head.ejs') %>
+    <title><%= config.title %></title>
+    <style>
+        body {
+            background: url("/assets/back.png") no-repeat fixed center center / cover;
+            image-rendering: pixelated;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #624B9E;
+            padding: 10px 20px;
+            margin: auto;
+            margin-bottom: 20px;
+            max-width: 1040px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .nav-links {
+            display: flex;
+        } 
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="https://lapadagames.itch.io/">Games</a>
+            <a href="https://github.com/Lapada-Games/" target="_blank">GitHub</a>
+            <a href="https://www.youtube.com/@LapadaGames-nn2nx">YouTube</a>
+        </div>
+    </nav>
+    <%- partial('partial/header.ejs') %>
+    <%- body %>
+</body>
+</html>
