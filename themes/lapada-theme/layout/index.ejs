@@ -3,6 +3,9 @@
   <article class="post">
     <h2><a href="<%= url_for(post.path) %>"><%= post.title %></a></h2>
     <div class="content"><%- post.excerpt || post.content %></div>
+    <% if (post.excerpt) { %>
+      <a href="<%= url_for(post.path) %>"><i>Leia mais...</i></a>
+    <% } %>
   </article>
   <br>
 
